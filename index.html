@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandd Studio — Marcas vivas ecoam</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="description"
+    content="Brandd Studio. Sistema de marca, identidade visual, naming e direção criativa. A marca resolvida de uma vez, com método e repertório.">
+
+  <!-- Iconoir (line icons, thin stroke) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============ HEADER (fixed, frosted) ============ -->
+  <header class="site-header" id="topo">
+    <a class="header-logo" href="#topo" aria-label="Brandd Studio — início">
+      <img src="./logo/brandd-logo.svg" alt="Brandd Studio" width="250" height="103">
+    </a>
+
+    <div class="header-actions">
+      <a class="btn btn-header"
+        href="https://wa.me/5511941844920?text=Vim%20pelo%20site%20da%20Brandd%20e%20confirmo%3A%20minha%20empresa%20%C3%A9%20maior%20que%20minha%20marca.%20Quero%20resolver%20isso."
+        target="_blank" rel="noopener">
+        <span class="btn-label-desktop">Entrar em contato</span>
+        <span class="btn-label-mobile">Contato</span>
+      </a>
+      <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-modal">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MENU MODAL (full-screen, frosted) ============ -->
+  <div class="menu-modal" id="menu-modal" aria-hidden="true">
+    <nav class="menu-nav" aria-label="Navegação principal">
+      <a href="#servicos" class="menu-link">Serviços</a>
+      <a href="#portfolio" class="menu-link">Portfólio</a>
+      <a href="#contato" class="menu-link">Contato</a>
+    </nav>
+    <div class="menu-contato caption">
+      <a href="mailto:douglas@brandd.studio"><i class="iconoir-mail"></i> douglas@brandd.studio</a>
+      <a href="https://wa.me/5511941844920?text=Vim%20pelo%20site%20da%20Brandd%20e%20confirmo%3A%20minha%20empresa%20%C3%A9%20maior%20que%20minha%20marca.%20Quero%20resolver%20isso."
+        target="_blank" rel="noopener"><i class="iconoir-phone"></i> +55 11 94184-4920</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ SEÇÃO 1 — HERO ============ -->
+    <section class="hero has-noise" id="hero">
+      <!-- Vetor background — distorts under the cursor (filter driven by script.js) -->
+      <div class="hero-vetor" aria-hidden="true">
+        <svg class="hero-vetor-svg" viewBox="0 0 7943.98 4021.33" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <filter id="vetor-distort" x="-30%" y="-30%" width="160%" height="160%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.004 0.009" numOctaves="2" seed="7" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <!-- soft radial spot that follows the cursor: white = show distorted copy -->
+            <radialGradient id="vetor-spot-grad">
+              <stop offset="0%" stop-color="#fff" />
+              <stop offset="65%" stop-color="#fff" />
+              <stop offset="100%" stop-color="#000" />
+            </radialGradient>
+            <mask id="vetor-spot">
+              <rect width="7943.98" height="4021.33" fill="#000" />
+              <circle id="vetor-spot-circle" cx="-9999" cy="-9999" r="900" fill="url(#vetor-spot-grad)" />
+            </mask>
+            <!-- inverse: hides the flat copy where the distorted one shows -->
+            <radialGradient id="vetor-spot-grad-inv">
+              <stop offset="0%" stop-color="#000" />
+              <stop offset="65%" stop-color="#000" />
+              <stop offset="100%" stop-color="#fff" />
+            </radialGradient>
+            <mask id="vetor-spot-inv">
+              <rect width="7943.98" height="4021.33" fill="#fff" />
+              <circle id="vetor-spot-circle-inv" cx="-9999" cy="-9999" r="900" fill="url(#vetor-spot-grad-inv)" />
+            </mask>
+          </defs>
+          <g mask="url(#vetor-spot-inv)">
+            <g class="hero-vetor-paths" id="vetor-art">
+              <path
+                d="M3035.93,2043.28L286.27,210.14h5672.83c339.87,0,672.63,99.92,956.72,286.27,290.24,190.4,517.78,463.21,651.71,783.64,87.96,210.47,133.4,436.51,133.4,664.64,0,32.91-.96,65.79-2.83,98.59,1.87,32.8,2.83,65.68,2.83,98.62,0,228.1-45.44,454.17-133.4,664.61-133.94,320.43-361.47,593.26-651.71,783.64-284.09,186.38-616.85,286.27-956.72,286.27H286.27l2749.66-1833.14Z" />
+              <path
+                d="M3184.07,2043.28L557.63,292.32h5401.47c323.86,0,640.97,95.22,911.68,272.81,276.52,181.39,493.31,441.33,620.93,746.62,83.79,200.44,127.05,415.7,127.05,632.95,0,32.91-.99,65.79-2.98,98.59,1.98,32.8,2.98,65.68,2.98,98.62,0,217.25-43.26,432.51-127.05,632.92-127.62,305.32-344.41,565.23-620.93,746.65-270.71,177.56-587.82,272.81-911.68,272.81H557.63l2626.44-1750.99Z" />
+              <path
+                d="M3332.18,2043.28L828.99,374.46h5130.11c634.82,0,1211.84,382.85,1456.81,968.97,79.57,190.4,120.7,394.87,120.7,601.26,0,32.91-1.05,65.82-3.15,98.59,2.1,32.8,3.15,65.68,3.15,98.62,0,206.36-41.13,410.85-120.7,601.26-244.97,586.09-821.99,968.94-1456.81,968.94H828.99l2503.19-1668.81Z" />
+              <path
+                d="M3480.29,2043.28L1100.35,456.64h4858.75c601.68,0,1148.8,362.92,1381.01,918.48,75.37,180.34,114.32,374.06,114.32,569.57,0,32.88-1.11,65.71-3.29,98.45,2.18,32.71,3.29,65.65,3.29,98.76,0,195.51-38.95,389.2-114.32,569.57-232.21,555.53-779.33,918.48-1381.01,918.48H1100.35l2379.94-1586.66Z" />
+              <path
+                d="M3628.43,2043.28L1371.71,538.79h4587.39c568.57,0,1085.78,343.05,1305.18,868.03,71.21,170.31,108,353.25,108,537.87,0,32.88-1.16,65.74-3.49,98.45,2.3,32.71,3.49,65.62,3.49,98.76,0,184.62-36.79,367.54-108,537.87-219.4,524.98-736.61,868-1305.18,868H1371.71l2256.72-1504.49Z" />
+              <path
+                d="M3776.54,2043.28L1643.07,620.97h4316.03c535.44,0,1022.74,323.12,1229.39,817.51,67.01,160.3,101.62,332.45,101.62,506.21,0,32.88-1.22,65.74-3.71,98.45,2.47,32.68,3.71,65.62,3.71,98.76,0,173.74-34.61,345.88-101.62,506.18-206.65,494.42-693.95,817.54-1229.39,817.54H1643.07l2133.47-1422.34Z" />
+              <path
+                d="M3924.65,2043.28L1914.43,703.11h4044.67c502.33,0,959.73,303.22,1153.59,767.05,62.82,150.26,95.27,311.64,95.27,474.52,0,32.91-1.33,65.76-3.97,98.48,2.64,32.63,3.97,65.57,3.97,98.73,0,162.88-32.46,324.23-95.27,474.49-193.86,463.83-651.26,767.06-1153.59,767.06H1914.43l2010.22-1340.16Z" />
+              <path
+                d="M4072.79,2043.28l-1886.99-1257.99h3773.31c469.19,0,896.68,283.29,1077.79,716.57,58.59,140.23,88.89,290.81,88.89,442.83,0,32.91-1.42,65.76-4.22,98.48,2.81,32.63,4.22,65.57,4.22,98.73,0,151.99-30.3,302.57-88.89,442.83-181.11,433.25-608.6,716.57-1077.79,716.57h-3773.31l1886.99-1258.02Z" />
+              <path
+                d="M4220.9,2043.28l-1763.74-1175.84h3501.95c436.08,0,833.64,263.42,1001.96,666.11,54.43,130.2,82.57,270,82.57,411.14,0,32.91-1.53,65.79-4.56,98.48,3,32.6,4.56,65.54,4.56,98.73,0,141.14-28.15,280.94-82.57,411.14-168.32,402.69-565.88,666.09-1001.96,666.09h-3501.95l1763.74-1175.84Z" />
+              <path
+                d="M4369.01,2043.28l-1640.49-1093.66h3230.59c402.95,0,770.63,243.5,926.16,615.6,50.23,120.19,76.2,249.19,76.2,379.47,0,32.94-1.64,65.82-4.96,98.48,3.29,32.57,4.96,65.51,4.96,98.73,0,130.25-25.97,259.29-76.2,379.45-155.54,372.13-523.22,615.63-926.16,615.63h-3230.59l1640.49-1093.69Z" />
+              <path
+                d="M4517.15,2043.28l-1517.27-1011.52h2959.23c369.84,0,707.58,223.6,850.37,565.14,46.03,110.15,69.85,228.39,69.85,347.78,0,32.97-1.81,65.82-5.41,98.48,3.57,32.54,5.41,65.48,5.41,98.73,0,119.37-23.81,237.63-69.85,347.75-142.78,341.55-480.53,565.14-850.37,565.14h-2959.23l1517.27-1011.51Z" />
+              <path
+                d="M4665.26,2043.28l-1394.02-929.34h2687.87c336.7,0,644.57,203.67,774.54,514.66,41.87,100.12,63.5,207.58,63.5,316.09,0,32.97-1.98,65.88-5.95,98.5,3.94,32.46,5.95,65.4,5.95,98.7,0,108.51-21.63,215.97-63.5,316.06-129.97,310.99-437.84,514.69-774.54,514.69h-2687.87l1394.02-929.37Z" />
+              <path
+                d="M4813.37,2043.28l-1270.77-847.19h2416.51c303.56,0,581.53,183.8,698.74,464.2,37.64,90.08,57.15,186.75,57.15,284.4,0,33-2.24,65.91-6.63,98.5,4.37,32.4,6.63,65.37,6.63,98.7,0,97.63-19.5,194.31-57.15,284.4-117.21,280.4-395.18,464.17-698.74,464.17h-2416.51l1270.77-847.19Z" />
+              <path
+                d="M4961.48,2043.28l-1147.52-765.01h2145.15c270.45,0,518.51,163.87,622.94,413.72,33.45,80.02,50.77,165.94,50.77,252.71,0,33.05-2.49,65.96-7.46,98.5,4.93,32.34,7.46,65.28,7.46,98.7,0,86.77-17.32,172.66-50.77,252.71-104.43,249.85-352.49,413.72-622.94,413.72h-2145.15l1147.52-765.04Z" />
+              <path
+                d="M5109.62,2043.28l-1024.3-682.87h1873.79c237.32,0,455.47,143.97,547.14,363.23,29.25,70.02,44.42,145.13,44.42,221.05,0,33.08-2.89,66.02-8.56,98.48,5.61,32.14,8.56,65.14,8.56,98.73,0,75.88-15.17,151-44.42,221.02-91.67,219.26-309.83,363.23-547.14,363.23h-1873.79l1024.3-682.87Z" />
+              <path
+                d="M5257.73,2043.28l-901.05-600.69h1602.42c204.21,0,392.46,124.04,471.32,312.75,25.09,59.98,38.07,124.33,38.07,189.35,0,33.17-3.37,66.16-10.01,98.5,6.58,31.97,10.01,65,10.01,98.7,0,65.03-12.98,129.34-38.07,189.33-78.86,188.7-267.11,312.77-471.32,312.77h-1602.42l901.05-600.72Z" />
+              <path
+                d="M5405.84,2043.28l-777.8-518.54h1331.06c171.07,0,329.41,104.17,395.52,262.29,20.89,49.95,31.72,103.52,31.72,157.66,0,33.28-4.11,66.36-12.1,98.53,7.91,31.72,12.1,64.77,12.1,98.67,0,54.14-10.83,107.69-31.72,157.63-66.1,158.14-224.45,262.29-395.52,262.29h-1331.06l777.8-518.54Z" />
+              <path
+                d="M5499.86,2007.22l-600.46-400.31h1059.7c185.56,0,345.06,150.49,345.06,337.78,0,33.51-5.19,66.73-15.28,98.56,9.92,31.29,15.28,64.4,15.28,98.65,0,187.26-159.51,337.78-345.06,337.78h-1059.7l600.46-400.31v-72.14Z" />
+              <path
+                d="M5582.01,1963.23l-411.25-274.17h788.34c140.12,0,262.91,113.67,262.91,255.63,0,35.01-7.46,68.31-20.78,98.59,13.32,30.3,20.78,63.58,20.78,98.62,0,141.93-122.8,255.6-262.91,255.6h-788.34l411.25-274.17v-160.1Z" />
+              <path
+                d="M6106.84,2043.28c20.58,27.95,33,61.88,33,98.62,0,96.58-86.06,173.45-180.74,173.45h-516.98l222.07-148.05v-248.03l-222.07-148.03h516.98c94.68,0,180.74,76.85,180.74,173.45,0,36.74-12.42,70.64-33,98.59h0Z" />
+              <path
+                d="M5714.73,1853.38h245.62c50.2,0,98.59,41.07,98.59,91.3s-48.39,91.93-98.59,91.93h-212.77v-161.32l-32.85-21.91ZM5814.22,2022.02v-146.72h104.57c42.18,0,83.99,34.53,83.99,76.68s-41.84,70.04-83.99,70.04h-104.57Z" />
+              <path
+                d="M5960.35,2049.94c50.2,0,98.59,41.73,98.59,91.96s-48.39,91.28-98.59,91.28h-245.62l32.85-21.91v-161.32h212.77ZM5814.22,2211.26h104.57c42.18,0,83.99-34.5,83.99-76.68s-41.84-70.02-83.99-70.02h-104.57v146.69Z" />
+            </g>
+          </g>
+          <!-- distorted copy, revealed only inside the cursor spot -->
+          <g class="hero-vetor-paths" filter="url(#vetor-distort)" mask="url(#vetor-spot)">
+            <use href="#vetor-art" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-line"><span class="hero-line-inner">Marcas</span></span>
+          <span class="hero-line"><span class="hero-line-inner">Vivas</span></span>
+          <span class="hero-line"><span class="hero-line-inner">Ecoam</span></span>
+        </h1>
+
+        <p class="hero-tagline">
+          Sua empresa cresceu. E a marca, acompanhou?&nbsp;<a class="hero-tagline-link"
+            href="https://wa.me/5511941844920?text=Vim%20pelo%20site%20da%20Brandd%20e%20confirmo%3A%20minha%20empresa%20%C3%A9%20maior%20que%20minha%20marca.%20Quero%20resolver%20isso."
+            target="_blank" rel="noopener">Vamos conversar</a>
+        </p>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <i class="iconoir-arrow-down"></i>
+      </div>
+    </section>
+
+    <!-- ============ SEÇÃO 2 — APOIO (light) ============ -->
+    <section class="apoio reveal-section">
+      <h2 class="apoio-lead reveal">Toda empresa deixa uma marca. Poucas deixam de propósito.</h2>
+      <p class="apoio-body reveal">Marca viva é a que fica. Organiza o caos do negócio em uma intenção clara e permanece
+        na memória de quem importa.</p>
+    </section>
+
+    <!-- ============ SEÇÃO 3 — SERVIÇOS (dark, accordion) ============ -->
+    <section class="entregas reveal-section has-noise" id="servicos">
+
+      <div class="servicos-acordeao reveal">
+
+        <div class="servico">
+          <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-panel-1">
+            <span class="servico-title">Sistema de Marca</span>
+            <i class="iconoir-nav-arrow-down servico-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="servico-panel" id="servico-panel-1" role="region">
+            <div class="servico-panel-inner">
+              <div class="servico-cols">
+                <div class="servico-icone">
+                  <img src="./assets/icone-x-fino.svg" alt="" loading="lazy">
+                </div>
+                <div class="servico-conteudo">
+                  <p class="servico-descricao">A marca inteira organizada: repertório, ativos, intenção e as regras que
+                    mantêm tudo coerente conforme a empresa cresce.</p>
+                  <ul class="servico-topicos">
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">Identidade Verbal</a></li>
+                    <li><a href="#">Manifesto</a></li>
+                    <li><a href="#">Slogan</a></li>
+                    <li><a href="#">Personalidade de Marca</a></li>
+                    <li><a href="#">Repertório Verbal</a></li>
+                    <li><a href="#">Plataforma de Marca</a></li>
+                    <li><a href="#">Identidade Visual</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="servico">
+          <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-panel-2">
+            <span class="servico-title">Identidade Visual</span>
+            <i class="iconoir-nav-arrow-down servico-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="servico-panel" id="servico-panel-2" role="region">
+            <div class="servico-panel-inner">
+              <div class="servico-cols">
+                <div class="servico-icone">
+                  <img src="./assets/icone-x-fino.svg" alt="" loading="lazy">
+                </div>
+                <div class="servico-conteudo">
+                  <p class="servico-descricao">O rosto da empresa, desenhado com intenção. Design não existe para ser
+                    bonito, bonito é subjetivo. Existe para funcionar, e funcionar é objetivo. Cada decisão visual serve
+                    ao propósito do negócio e ao público que ele quer alcançar.</p>
+                  <ul class="servico-topicos">
+                    <li><a href="#">Paleta de Cores</a></li>
+                    <li><a href="#">Tipografia</a></li>
+                    <li><a href="#">Construção do Logo</a></li>
+                    <li><a href="#">Formas Base</a></li>
+                    <li><a href="#">Ilustrações</a></li>
+                    <li><a href="#">Mascote</a></li>
+                    <li><a href="#">Ícone</a></li>
+                    <li><a href="#">Sistema Visual</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="servico">
+          <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-panel-3">
+            <span class="servico-title">Naming</span>
+            <i class="iconoir-nav-arrow-down servico-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="servico-panel" id="servico-panel-3" role="region">
+            <div class="servico-panel-inner">
+              <div class="servico-cols">
+                <div class="servico-icone">
+                  <img src="./assets/icone-x-fino.svg" alt="" loading="lazy">
+                </div>
+                <div class="servico-conteudo">
+                  <p class="servico-descricao">O nome que pertence só a você. Estudamos mercado, conceito e
+                    disponibilidade de registro, e criamos junto um nome com significado, conectado ao produto e ao
+                    público que ele fala.</p>
+                  <ul class="servico-topicos">
+                    <li><a href="#">Pesquisa de Mercado</a></li>
+                    <li><a href="#">Conceito</a></li>
+                    <li><a href="#">Disponibilidade de Registro</a></li>
+                    <li><a href="#">Arquitetura de Nomes</a></li>
+                    <li><a href="#">Significado</a></li>
+                    <li><a href="#">Validação</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="servico">
+          <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-panel-4">
+            <span class="servico-title">Direção Criativa</span>
+            <i class="iconoir-nav-arrow-down servico-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="servico-panel" id="servico-panel-4" role="region">
+            <div class="servico-panel-inner">
+              <div class="servico-cols">
+                <div class="servico-icone">
+                  <img src="./assets/icone-x-fino.svg" alt="" loading="lazy">
+                </div>
+                <div class="servico-conteudo">
+                  <p class="servico-descricao">A leitura estratégica que conduz cada decisão criativa. Campanhas
+                    sazonais, ações promocionais, projetos com objetivo claro mas sem clareza de como traduzir aquilo em
+                    imagem. O ruído entre a intenção e a forma. É o problema que resolvemos.</p>
+                  <ul class="servico-topicos">
+                    <li><a href="#">Campanhas Sazonais</a></li>
+                    <li><a href="#">Ações Promocionais</a></li>
+                    <li><a href="#">Conceito Visual</a></li>
+                    <li><a href="#">Direção de Arte</a></li>
+                    <li><a href="#">Consultoria Criativa</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="servico">
+          <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-panel-5">
+            <span class="servico-title">Design Aplicado</span>
+            <i class="iconoir-nav-arrow-down servico-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="servico-panel" id="servico-panel-5" role="region">
+            <div class="servico-panel-inner">
+              <div class="servico-cols">
+                <div class="servico-icone">
+                  <img src="./assets/icone-x-fino.svg" alt="" loading="lazy">
+                </div>
+                <div class="servico-conteudo">
+                  <p class="servico-descricao">A marca saindo do manual e entrando no mundo real, com o mesmo rigor em
+                    cada peça. Da rede social à prateleira, cada aplicação mantém a identidade íntegra.</p>
+                  <ul class="servico-topicos">
+                    <li><a href="#">Social Media</a></li>
+                    <li><a href="#">Embalagem</a></li>
+                    <li><a href="#">Material Gráfico</a></li>
+                    <li><a href="#">Design de Produto</a></li>
+                    <li><a href="#">Papelaria</a></li>
+                    <li><a href="#">Peças Promocionais</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="servico">
+          <button class="servico-toggle" type="button" aria-expanded="false" aria-controls="servico-panel-6">
+            <span class="servico-title">Web e Aplicações</span>
+            <i class="iconoir-nav-arrow-down servico-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="servico-panel" id="servico-panel-6" role="region">
+            <div class="servico-panel-inner">
+              <div class="servico-cols">
+                <div class="servico-icone">
+                  <img src="./assets/icone-x-fino.svg" alt="" loading="lazy">
+                </div>
+                <div class="servico-conteudo">
+                  <p class="servico-descricao">Sites e aplicações web que traduzem a marca para o digital. Da estrutura
+                    à interface, construídos com a mesma intenção que guia todo o resto.</p>
+                  <ul class="servico-topicos">
+                    <li><a href="#">Sites</a></li>
+                    <li><a href="#">Landing Pages</a></li>
+                    <li><a href="#">Aplicações Web</a></li>
+                    <li><a href="#">Interface</a></li>
+                    <li><a href="#">Experiência do Usuário</a></li>
+                    <li><a href="#">Identidade Digital</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ============ SEÇÃO 4 — COMO TRABALHO (light, ponte) ============ -->
+    <section class="ponte reveal-section">
+      <p class="ponte-text ponte-text-left reveal">Cada negócio chega com uma dor diferente. Por isso o método se adapta
+        à realidade de cada empresa, com a leitura para saber o que aquela marca específica precisa.</p>
+      <div class="ponte-ticker" aria-hidden="true">
+        <div class="ponte-ticker-track">
+          <span>MÉTODO BRANDD &nbsp;&nbsp;&nbsp;</span>
+          <span>MÉTODO BRANDD &nbsp;&nbsp;&nbsp;</span>
+          <span>MÉTODO BRANDD &nbsp;&nbsp;&nbsp;</span>
+          <span>MÉTODO BRANDD &nbsp;&nbsp;&nbsp;</span>
+          <span>MÉTODO BRANDD &nbsp;&nbsp;&nbsp;</span>
+          <span>MÉTODO BRANDD &nbsp;&nbsp;&nbsp;</span>
+          <span>MÉTODO BRANDD &nbsp;&nbsp;&nbsp;</span>
+          <span>MÉTODO BRANDD &nbsp;&nbsp;&nbsp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEÇÃO 5 — GALERIA (dark, stacked drawer) ============ -->
+    <section class="galeria has-noise" id="portfolio">
+      <h2 class="galeria-lead reveal">Vinte anos<br>transformando<br>intenção em marca.</h2>
+      <div class="galeria-pin">
+        <img class="galeria-deco" src="assets/icone-x-fino.svg" alt="" aria-hidden="true">
+        <div class="galeria-stack">
+          <figure class="card"><a class="card-link" href="https://instagram.com/spa.sundari" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-sundari.jpg" alt="" loading="lazy"><span
+                class="card-nome">SUNDARI</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://instagram.com/folkvalley" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-folk.jpg" alt="" loading="lazy"><span
+                class="card-nome">FOLK VALLEY</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://instagram.com/schinzariadv" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-schinzari.jpg" alt="" loading="lazy"><span
+                class="card-nome">SCHINZARI</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://instagram.com/graficafuturaim" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-futuraim.jpg" alt="" loading="lazy"><span
+                class="card-nome">FUTURAIM</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://wasteeco.com.br/" target="_blank" rel="noopener"><img
+                class="card-img" src="img/portfolio-waste.jpg" alt="" loading="lazy"><span class="card-nome">WASTE
+                ECO</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://instagram.com/felizzobr" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-felizzo.jpg" alt="" loading="lazy"><span
+                class="card-nome">FELIZZO</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://instagram.com/linkgrades" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-linkgrades.jpg" alt="" loading="lazy"><span
+                class="card-nome">LINK GRADES</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://instagram.com/renovacao.oficial" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-renovacao.jpg" alt="" loading="lazy"><span
+                class="card-nome">RENOVAÇÃO</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://proteckmax.com.br/" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-proteckmax.jpg" alt="" loading="lazy"><span
+                class="card-nome">PROTECKMAX</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://instagram.com/criadeck" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-criadeck.jpg" alt="" loading="lazy"><span
+                class="card-nome">CRIADECK</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://instagram.com/wraembalagens" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-wra.jpg" alt="" loading="lazy"><span
+                class="card-nome">WRA EMBALAGENS</span></a></figure>
+          <figure class="card"><a class="card-link" href="https://www.crtecinfo.com.br" target="_blank"
+              rel="noopener"><img class="card-img" src="img/portfolio-crtec.jpg" alt="" loading="lazy"><span
+                class="card-nome">CRTEC</span></a></figure>
+        </div>
+        <div class="galeria-counter" aria-hidden="true">
+          <span class="galeria-counter-current">01</span>
+          <span class="galeria-counter-sep">/</span>
+          <span class="galeria-counter-total">12</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEÇÃO 6 — O OFÍCIO (light, + B self-drawing) ============ -->
+    <section class="oficio" id="oficio">
+      <p class="oficio-text reveal">Design começa muito antes do traço. Começa em entender o que a dona ou o dono do
+        negócio sente e ainda não conseguiu dizer. Duas décadas de experiência na leitura de intenção de quem empreende
+        no Brasil é o que desburocratiza processos sem perda de dados fundamentais e estratégicos.</p>
+
+      <!-- Perspective "B" monogram, stroke-adapted from logo/icone.svg, draws on scroll -->
+      <div class="oficio-icone" aria-hidden="true">
+        <svg class="icone-b" viewBox="0 0 1244.968 786.192" overflow="visible">
+          <g transform="translate(-16407.911)">
+            <path class="icone-b-path"
+              d="M 0,0 -123.662,-35.214 28.048,-170.655 151.71,-135.44 C 289.787,-96.121 122.009,34.744 0,0 m 215.87,-134.937 -173.758,-49.48 -17.25,-4.912 -60.492,-17.226 -166.798,148.911 -61.499,9.178 c 96.804,27.567 193.607,55.133 290.331,82.676 59.39,16.912 159.014,-4.693 210.962,-51.07 51.948,-46.377 37.893,-101.165 -21.496,-118.077 m -20.204,-39.745 -123.662,-35.215 151.71,-135.441 123.662,35.215 c 122.009,34.744 -13.633,174.76 -151.71,135.441 m 223.448,-141.703 c -96.725,-27.544 -193.527,-55.11 -290.331,-82.676 l 16.165,31.294 -166.798,148.91 c 83.885,23.888 167.692,47.753 251.499,71.619 59.39,16.912 159.703,-5.309 211.651,-51.686 51.879,-46.315 37.204,-100.549 -22.186,-117.461"
+              transform="matrix(1.3333333,0,0,-1.3333333,16890.972,153.67787)" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ SEÇÃO 7 — FUNDADOR (dark) ============ -->
+    <section class="fundador reveal-section has-noise">
+      <div class="fundador-foto reveal">
+        <img src="img/douglas-oliveira-perfil.png" alt="Douglas Oliveira" class="fundador-img">
+      </div>
+      <div class="fundador-bio">
+        <h2 class="reveal">Douglas Oliveira, fundador.</h2>
+        <p class="reveal">Comecei na pré-impressão, passei por direção criativa e marketing, fundei três estúdios. Hoje
+          conduzo a Brandd.</p>
+        <a class="fundador-link reveal" href="https://www.linkedin.com/in/douglasoliveirabr" target="_blank"
+          rel="noopener">
+          <i class="iconoir-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </section>
+
+    <!-- Seção do Vídeo Controlado por Scroll -->
+    <section class="fechamento reveal-section has-noise">
+      <h2 class="fechamento-title reveal">Negócio grande não combina com marca pequena.</h2>
+      <a class="btn btn-cta reveal"
+        href="https://wa.me/5511941844920?text=Vim%20pelo%20site%20da%20Brandd%20e%20confirmo%3A%20minha%20empresa%20%C3%A9%20maior%20que%20minha%20marca.%20Quero%20resolver%20isso."
+        target="_blank" rel="noopener">
+        Vamos resolver isso
+      </a>
+    </section>
+
+    <!-- ============ SEÇÃO 8 — FECHAMENTO + CTA (deep blue) ============ -->
+    <section id="video-scrub-section" class="w-full h-screen bg-black">
+      <video id="hero-video" preload="auto" muted playsinline poster="img/bg-logo-poster.png">
+        <source src="img/bg-logo.mp4" type="video/mp4">
+      </video>
+    </section>
+
+  </main>
+
+  <!-- ============ RODAPÉ (near-black) ============ -->
+  <footer class="site-footer has-noise" id="contato">
+    <div class="footer-top">
+      <img class="footer-logo logo-white" src="./assets/icone-b.svg" alt="Brandd Studio">
+      <div class="footer-contato">
+        <a href="mailto:douglas@brandd.studio"><i class="iconoir-mail"></i> douglas@brandd.studio</a>
+        <a href="https://wa.me/5511941844920?text=Vim%20pelo%20site%20da%20Brandd%20e%20confirmo%3A%20minha%20empresa%20%C3%A9%20maior%20que%20minha%20marca.%20Quero%20resolver%20isso."
+          target="_blank" rel="noopener"><i class="iconoir-phone"></i> +55 11 94184-4920</a>
+      </div>
+      <nav class="footer-redes caption" aria-label="Redes sociais">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://instagram.com/brandd.br" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-legal">© 2026 Todos os direitos reservados. Brandd Ltda. 64.752.924/0001-27</span>
+    </div>
+  </footer>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

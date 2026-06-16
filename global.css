@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Brandd Studio — global.css
+   Single source of truth for typography: fonts, tokens and type scale.
+   Loaded BEFORE styles.css. No layout, color or spacing rules here.
+   ========================================================================== */
+
+/* ---------- Fonts (local, WOFF2) ---------- */
+@font-face {
+  font-family: 'AtypDisplayTRIAL-Bold';
+  src: url('./fonts/AtypBLDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AtypDisplayTRIAL-Medium';
+  src: url('./fonts/AtypBLDisplay-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Typographic tokens ---------- */
+:root {
+  --font-display: 'AtypDisplayTRIAL-Bold', sans-serif;
+  --font-medium: 'AtypDisplayTRIAL-Medium', sans-serif;
+}
+
+/* ---------- Base ----------
+   Default for the whole site: Medium face, normal weight.
+   The ONLY bold element is the hero h1 (rule below). */
+body {
+  font-family: var(--font-medium);
+  font-weight: normal;
+}
+
+/* UA stylesheets make headings bold — neutralize everything except h1 */
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-family: var(--font-medium);
+  font-weight: normal;
+}
+
+/* ---------- Type scale ----------
+   h1 — display, fluid/dominant (hero), uppercase, tight tracking
+   h2 — medium, one consistent size site-wide, sentence case
+   h3 — medium (no bold), sentence case
+   p  — medium, base body size
+   .caption — medium, smaller than p (footer links, labels, small text) */
+h1,
+h2,
+h3 {
+  overflow: visible;
+  padding-bottom: 0.15em;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 14vw, 12rem);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 0.8;
+}
+
+h2 {
+  font-family: var(--font-medium);
+  font-weight: normal;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  text-transform: none;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-family: var(--font-medium);
+  font-weight: normal;
+  /* 2pt (~0.167rem) larger than the previous h3 scale */
+  font-size: clamp(1.32rem, 2.5vw, 1.67rem);
+  text-transform: none;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+/* service-title — accordion row names: between h2 and h3 on the scale */
+.servico-title {
+  font-family: var(--font-medium);
+  font-weight: normal;
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  text-transform: none;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-family: var(--font-medium);
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.caption {
+  font-family: var(--font-medium);
+  font-weight: normal;
+  font-size: 0.875rem;
+}
