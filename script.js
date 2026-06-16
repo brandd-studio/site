@@ -476,3 +476,17 @@ if (prefersReducedMotion) {
    Só recomputa start/end — não altera animações, pin nem z-index.
    -------------------------------------------------------------------------- */
 window.addEventListener('load', () => ScrollTrigger.refresh());
+
+/* --------------------------------------------------------------------------
+   Logo do header → topo INSTANTÂNEO (sem scroll suave).
+   O CSS tem scroll-behavior:smooth global; aqui forçamos behavior:'auto'
+   só no clique do logo, sem afetar os demais âncoras do site.
+   -------------------------------------------------------------------------- */
+(function logoInstantTop() {
+  const logo = document.querySelector('.header-logo');
+  if (!logo) return;
+  logo.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  });
+})();

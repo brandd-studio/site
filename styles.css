@@ -1039,6 +1039,13 @@ button {
     aspect-ratio: 3 / 4;
   }
 
+  /* ---- Galeria: reduz o h2 no mobile p/ "transformando" caber e não estourar
+     a largura da tela (causa do scroll horizontal). Escala até ~320px. ---- */
+  .galeria-lead {
+    font-size: clamp(2rem, 12vw, 3.5rem);
+    line-height: 1.05;
+  }
+
   /* ---- Galeria: SVG decorativo maior no mobile ---- */
   .galeria-deco {
     width: 105vw;
@@ -1058,11 +1065,11 @@ button {
     align-items: flex-start;
   }
 
-  /* ---- 3.4 — Conteúdo na base da hero, espaço acima preenchido pelo SVG ---- */
+  /* ---- 3.4 — Conteúdo na base da hero, fundo azul cobrindo a tela toda ---- */
   .hero {
     align-items: flex-end;
     padding-bottom: clamp(8rem, 22vw, 14rem);
-    min-height: 92svh;
+    min-height: 100svh;
   }
 }
 
